@@ -15,6 +15,10 @@
       "text-summary"
     ],
     "report-dir": "./coverage",
+    "all ": true,
+    "include": [
+      "src/*.js"
+    ],
     "exclude": [
       "test/**",
       "node_modules/**"
