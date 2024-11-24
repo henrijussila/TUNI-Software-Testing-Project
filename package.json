@@ -7,13 +7,14 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm test",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=lcov > coverage/lcov.info && coveralls < coverage/lcov.info"
   },
   "nyc": {
     "reporter": [
       "lcov",
       "text-summary"
     ],
+    "report-dir": "./coverage",
     "exclude": [
       "test/**",
       "node_modules/**"
