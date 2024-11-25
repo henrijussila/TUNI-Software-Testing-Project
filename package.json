@@ -5,23 +5,25 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc npm test",
-    "coveralls": "nyc report --reporter=lcov > coverage/lcov.info && coveralls < coverage/lcov.info"
+    "test": "mocha --recursive",
+    "coverage": "c8 npm test && c8 report --reporter=text-lcov",
+    "coveralls": "c8 report --reporter=lcov > coverage/lcov.info && coveralls < coverage/lcov.info"
   },
-  "nyc": {
+  "c8": {
     "reporter": [
       "lcov",
-      "text-summary"
+      "text-summary",
+      "text"
     ],
     "report-dir": "./coverage",
     "all ": true,
     "include": [
-      "src/*.js"
+      "src"
     ],
     "exclude": [
       "test/**",
-      "node_modules/**"
+      "node_modules/**",
+      "src/.internal/**"
     ]
   },
   "repository": {
@@ -38,5 +40,8 @@
     "coveralls": "^3.1.1",
     "mocha": "^10.8.2",
     "nyc": "^17.1.0"
+  },
+  "dependencies": {
+    "c8": "^10.1.2"
   }
 }
