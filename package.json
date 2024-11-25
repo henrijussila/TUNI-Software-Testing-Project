@@ -16,14 +16,14 @@
       "text"
     ],
     "report-dir": "./coverage",
-    "all ": true,
+    "all": true,
     "include": [
       "src"
     ],
     "exclude": [
-      "test/**",
-      "node_modules/**",
-      "src/.internal/**"
+      "test/*",
+      "node_modules",
+      "**/.internal/*"
     ]
   },
   "repository": {
