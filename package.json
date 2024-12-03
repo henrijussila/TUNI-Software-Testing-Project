@@ -18,7 +18,16 @@
     "report-dir": "./coverage",
     "all": true,
     "include": [
-      "src"
+      "src/add.js",
+      "src/capitalize.js",
+      "src/castArray.js",
+      "src/defaultTo.js",
+      "src/get.js",
+      "src/every.js",
+      "src/isEmpty.js",
+      "src/memoize.js",
+      "src/toNumber.js",
+      "src/toString.js"
     ],
     "exclude": [
       "test/*",

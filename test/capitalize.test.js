@@ -2,7 +2,7 @@ import assert from 'assert';
 import capitalize from '../src/capitalize.js';
 
 describe('capitalize', function () {
-    // Positive Tests
+    // POSITIVE TESTS
     it('should capitalize a single word in uppercase', function () {
         // Input is a valid string in uppercase
         assert.strictEqual(capitalize('FRED'), 'Fred');
@@ -31,11 +31,19 @@ describe('capitalize', function () {
         assert.strictEqual(capitalize('_fred'), '_fred');
     });
 
-    // Negative Tests
+    // NEGATIVE TESTS
     it('should handle an empty string', function () {
-        // Input is an empty string
         assert.strictEqual(capitalize(''), '');
     });
+
+    // These tests fail because the function does not throw an error when the inputs are not strings
+    it('should throw an error when input is not string', function () {
+        assert.throws(() => capitalize(null), Error);
+        assert.throws(() => capitalize(undefined), Error);
+        assert.throws(() => capitalize(123), Error);
+        assert.throws(() => capitalize(true), Error);
+      });
+    
 
     // Does not give error for non-string input, but returns the input as a string
     it('should handle non-string input gracefully', function () {
