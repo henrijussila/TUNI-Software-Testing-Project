@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha --recursive",
-    "coverage": "c8 npm test && c8 report --reporter=text-lcov",
+    "coverage": "c8 npm test && c8 report",
     "coveralls": "c8 report --reporter=lcov > coverage/lcov.info && coveralls < coverage/lcov.info"
   },
   "c8": {
