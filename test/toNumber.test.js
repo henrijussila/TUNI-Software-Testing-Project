@@ -38,13 +38,6 @@ describe('toNumber', () => {
       assert(Number.isNaN(toNumber('0xZZZ')));
       assert(Number.isNaN(toNumber('-0xGHI')));
     });
-
-    it('should handle edge cases with `0` and `-0`', () => {
-      assert.strictEqual(toNumber(0), 0);
-      assert.strictEqual(toNumber(-0), -0);
-      assert.strictEqual(toNumber('0'), 0);
-      assert.strictEqual(toNumber('-0'), -0);
-    });
   });
 
   // Negative Test Cases

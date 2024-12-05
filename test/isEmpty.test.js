@@ -22,6 +22,7 @@ describe('isEmpty', function () {
         assert.strictEqual(isEmpty(1), true);
         assert.strictEqual(isEmpty(0), true);
         assert.strictEqual(isEmpty(-100), true);
+        assert.strictEqual(isEmpty(Infinity), true);
     });
     it('should return true for arguments with no values', () => {
         function argumentFuncPos() {
