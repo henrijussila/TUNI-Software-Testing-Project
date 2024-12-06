@@ -29,10 +29,10 @@ describe('toString', () => {
     });
 
 
-    // it('should return an empty string for null or undefined', () => {
-    //   assert.strictEqual(toString(null), '');
-    //   assert.strictEqual(toString(undefined), '');
-    // });
+    it('should return an empty string for null or undefined', () => {
+      assert.strictEqual(toString(null), '');
+      assert.strictEqual(toString(undefined), '');
+    });
     
 
     it('should handle object with custom toString method', () => {

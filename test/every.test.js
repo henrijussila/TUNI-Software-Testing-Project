@@ -20,14 +20,12 @@ describe('Array', function () {
             assert.equal(every([1, true, null, 'yes'], Boolean), false);
         });
 
-        /* This should probably fail or throw typeError... What does every even do if given object is not an array?
-        Strings can be arrays of chars but the rest...
+
         it('should return false or TypeError when passed array is not an array with Boolean predicate', function () {
             assert.equal(every(4, Boolean), false);
             assert.equal(every('mystring', Boolean), false);
             assert.equal(every({apple: 'hate'}, Boolean), false);
         });
-        */
 
         it('should stop iterating at first element that fails predicate', function () {
             let iters = 0

@@ -45,7 +45,7 @@ describe('memoize', function () {
         assert.throws(() => memoize(func, 'resolver'), TypeError, 'Expected a function');
         assert.throws(() => memoize(func, {}), TypeError, 'Expected a function');
     });
-    /* Failing test
+
     it('should not cache results for undefined keys', () => {
         const identity = (x) => x;
         const memoizedIdentity = memoize(identity);
@@ -53,7 +53,6 @@ describe('memoize', function () {
         assert.strictEqual(memoizedIdentity(undefined), undefined);
         assert.strictEqual(memoizedIdentity.cache.has(undefined), false); // `undefined` keys are not stored
     });
-    */
 
     it('should handle cache misses properly', () => {
         let callCount = 0;
