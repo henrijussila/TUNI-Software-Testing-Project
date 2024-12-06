@@ -2,7 +2,7 @@ import assert from 'assert';
 import defaultTo from '../src/defaultTo.js';
 
 describe('defaultTo', function () {
-    
+
     // POSITIVE TESTS
     it('should return the provided value if it is not null or undefined', function () {
         assert.strictEqual(defaultTo(1, 10), 1);
@@ -22,10 +22,7 @@ describe('defaultTo', function () {
 
     it('should return the default value if the provided value is NaN', function () {
         // This test should pass according to defaultTo.js but it fails
-        //assert.strictEqual(defaultTo(NaN, 'default'), 'default');
-
-        // Instead this passes, even though it should return 'default'
-        // assert.strictEqual(defaultTo(NaN, 'default'), NaN);
+        assert.strictEqual(defaultTo(NaN, 'default'), 'default');
     });
 
     // LIMIT VALUE TESTS
